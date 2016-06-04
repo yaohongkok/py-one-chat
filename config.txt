@@ -1,0 +1,5 @@
+[onechat]
+;comments - Get token through FB developer portal and recepient through
+; creating a web app that logs the incoming requests
+FACEBOOK_MESSENGER_TOKEN = XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+RECEPIENT = 1015694XXXXXXX0710
