@@ -33,3 +33,23 @@ class FacebookTextMessage(FacebookMessage):
 		}
 		
 		return jsonData
+
+class FacebookImageMessage(FacebookMessage):
+	def __init__(self, imageUrl):
+		super(FacebookImageMessage, self).__init__("")
+		self.imageUrl = imageUrl
+	
+	def toPayload(self,recepient):
+		jsonData = {
+			"recipient": self.jsonIdOrPhone(recepient),
+			"message": {
+				"attachment": {
+					"type": "image",
+					"payload": {
+						"url": self.imageUrl
+					}
+				}
+			}
+		}
+		
+		return jsonData
