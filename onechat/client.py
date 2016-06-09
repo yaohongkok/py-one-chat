@@ -8,7 +8,7 @@ class Client(object):
 	
 	def send(self, recepient, message):
 		if message.platform == "facebook":
-			self.sendFacebookMessage(recepient, message)
+			return self.sendFacebookMessage(recepient, message)
 		else:
 			raise Exception('Unknown Message\' Platform')
 	
@@ -18,7 +18,6 @@ class Client(object):
 		
 		try:
 			response = requests.post(sendUrl, json=message.toPayload(recepient))
-			print response.__dict__
 			return response
 		except Exception:
 			print "Failed"
