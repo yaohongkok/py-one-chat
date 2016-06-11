@@ -17,7 +17,7 @@ from onechat.client import Client
 from onechat.message import *
 
 client = Client("config.txt")
-recepient = client.config.get('onechat','RECEPIENT')
+recepient = "1015694XXXXXXX0710"
 ```
 
 For Facebook Text Message:
@@ -65,4 +65,4 @@ response = client.send(recepient, message)
 
 ## Future plans
 To support Facebook Messenger's Receipt templates.
-Also, we are consider to support Twillio.
+Other messaging platform to support: Twillio, Skype, Kik, Line & WeChat.
