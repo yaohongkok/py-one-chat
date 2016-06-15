@@ -11,7 +11,7 @@ Currently, it supports Facebook messages of the following type:
 
 ## Usage
 To setup:
-```
+```python
 import onechat
 from onechat.client import Client
 from onechat.message import *
@@ -21,19 +21,19 @@ recepient = "1015694XXXXXXX0710"
 ```
 
 For Facebook Text Message:
-```
+```python
 message = FacebookTextMessage("test")
 response = client.send(recepient, message)
 ```
 
 For Facebook Image Message:
-```
+```python
 message = FacebookImageMessage("http://some.image.com")
 response = client.send(recepient, message)
 ```
 
 For Facebook Button Message:
-```
+```python
 facebookButtonsInfo = FacebookButtonsInfo(\
 			types=["web_url","postback","web_url"], \
 			titles=["Button A", "Button B", "Button C"],\
@@ -44,7 +44,7 @@ response = client.send(recepient, message)
 ```
 
 For Facebook Generic Template:
-```
+```python
 facebookButtonsInfo = FacebookButtonsInfo(\
 			types=["web_url","postback","web_url"], \
 			titles=["Button A", "Button B", "Button C"],\
